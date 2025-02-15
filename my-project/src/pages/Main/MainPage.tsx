@@ -13,7 +13,7 @@ export default function MainPage() {
 			{/* Flex container for sidebar and main content */}
 			<div className="flex flex-1">
 				{/* Sidebar taking 20% of the screen width */}
-				<div className="w-1/8 bg-white shadow-md dark:bg-gray-800">
+				<div className="w-1/8 shadow-md dark:bg-gray-800">
 					<SideNavBar />
 				</div>
 
