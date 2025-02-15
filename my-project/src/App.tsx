@@ -1,6 +1,7 @@
 import {ReactNode} from 'react';
 import LoginPage from './pages/Login/LoginPage';
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+import MainPage from './pages/Main/MainPage';
 
 // Protected Route Component
 const ProtectedRoute = ({element}: {element: ReactNode}) => {
@@ -21,7 +22,8 @@ function App() {
 				<Route path="/login" element={<LoginPage />} />
 
 				{/* Protected Route: Dashboard Page */}
-				<Route path="/dashboard" element={<ProtectedRoute element={<LoginPage />} />} />
+				{/*<Route path="/home" element={<ProtectedRoute element={<MainPage />} />} />*/}
+				<Route path="/home" element={<MainPage />} />
 
 				{/* Redirects any other route to the login page */}
 				<Route path="*" element={<Navigate to="/login" />} />

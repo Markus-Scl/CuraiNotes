@@ -5,6 +5,11 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;  /* Prevent any scrolling */
+  @apply bg-gray-100 text-gray-800;
+}
+
+.dark body {
+  @apply bg-gray-900 text-white;
 }
 
 #root {

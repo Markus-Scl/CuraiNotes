@@ -1,7 +1,9 @@
 import mainLoginImage from '../../assets/loginMain1.jpg';
 import cardLoginImage from '../../assets/loginCard1.jpg';
+import {useNavigate} from 'react-router-dom';
 
 export default function LoginPage() {
+	const navigate = useNavigate();
 	return (
 		<div className="flex min-h-screen items-center justify-center bg-cover bg-center" style={{backgroundImage: `url(${mainLoginImage})`}}>
 			{/* Card Container with two sections */}
@@ -37,7 +39,9 @@ export default function LoginPage() {
 							</div>
 
 							{/* Sign In Button */}
-							<button className="w-full text-cyan-400 border-2 border-cyan-400 hover:bg-cyan-400 hover:text-white py-2 rounded-lg font-semibold cursor-pointer transition duration-200">
+							<button
+								className="w-full text-cyan-400 border-2 border-cyan-400 hover:bg-cyan-400 hover:text-white py-2 rounded-lg font-semibold cursor-pointer transition duration-200"
+								onClick={() => navigate('/home')}>
 								Sign In
 							</button>
 						</form>
