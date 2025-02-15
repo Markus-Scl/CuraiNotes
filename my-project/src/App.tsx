@@ -1,7 +1,6 @@
-import {ReactNode, useState} from 'react';
-import './App.css';
+import {ReactNode} from 'react';
 import LoginPage from './pages/Login/LoginPage';
-import {BrowserRouter, Outlet, Routes, Route, Navigate} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 
 // Protected Route Component
 const ProtectedRoute = ({element}: {element: ReactNode}) => {
@@ -15,8 +14,6 @@ const ProtectedRoute = ({element}: {element: ReactNode}) => {
 };
 
 function App() {
-	const [count, setCount] = useState(0);
-
 	return (
 		<BrowserRouter>
 			<Routes>
