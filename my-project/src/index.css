@@ -1,14 +1,18 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;  /* Prevent any scrolling */
+}
+
+html {
   @apply bg-gray-100 text-gray-800;
 }
 
-.dark body {
+html.dark {
   @apply bg-gray-900 text-white;
 }
 
