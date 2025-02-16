@@ -8,7 +8,9 @@ export default function TopNavBar() {
 		<div className="w-full bg-white/10 shadow-md py-3 px-6 flex items-center justify-between">
 			{/* Logo */}
 			<div className="flex items-center">
-				<h1 className="text-xl font-bold text-cyan-400 dark:text-white">CurAINotes</h1>
+				<h1 className="text-xl font-bold text-cyan-400  cursor-pointer" onClick={() => navigate('/home')}>
+					CurAINotes
+				</h1>
 			</div>
 
 			{/* Right Side (Search, Theme Toggle & Logout) */}
@@ -19,7 +21,7 @@ export default function TopNavBar() {
 					className="py-1 px-4 rounded-md text-cyan-400 dark:bg-gray-800 dark:text-cyan-400 placeholder-cyan-400 dark:placeholder-cyan-400 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 mr-4"
 				/>
 				<ThemeToggle />
-				<a href="#" className="text-cyan-400 hover:text-cyan-600 transition ml-4">
+				<a href="login" className="text-cyan-400 hover:text-cyan-600 transition ml-4">
 					<Logout fontSize="large" className="text-cyan-400" onClick={() => navigate('/login')} />
 				</a>
 			</div>

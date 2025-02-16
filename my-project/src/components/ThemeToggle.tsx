@@ -17,8 +17,6 @@ export default function ThemeToggle() {
 	}, [isDark]);
 
 	return (
-		<IconButton onClick={() => setIsDark(!isDark)} className="text-cyan-400 dark:text-white">
-			{isDark ? <NightlightRound fontSize="large" className="text-cyan-400" /> : <WbSunny fontSize="large" className="text-cyan-400" />}
-		</IconButton>
+		<IconButton onClick={() => setIsDark(!isDark)}>{isDark ? <NightlightRound fontSize="large" className="text-cyan-400" /> : <WbSunny fontSize="large" className="text-cyan-400" />}</IconButton>
 	);
 }

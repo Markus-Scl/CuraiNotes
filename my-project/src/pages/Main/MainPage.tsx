@@ -11,7 +11,7 @@ export default function MainPage() {
 
 			{/* Flex container for sidebar and main content */}
 			<div className="flex flex-1">
-				<div className="w-1/8 min-w-[200px] shadow-md dark:bg-gray-800">
+				<div className="w-1/8 min-w-[180px] shadow-md dark:bg-gray-800">
 					<SideNavBar />
 				</div>
 
