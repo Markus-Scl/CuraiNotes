@@ -75,6 +75,7 @@ const TopNavBar = () => {
 								className="w-full flex items-center text-left py-2 px-4 text-cyan-400 hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer"
 								onClick={() => {
 									i18n.changeLanguage('en');
+									setLanguageMenuOpen((prev) => !prev);
 								}}>
 								<h1>EN</h1>
 							</button>
@@ -82,6 +83,7 @@ const TopNavBar = () => {
 								className="w-full flex items-center text-left py-2 px-4 text-cyan-400 hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer"
 								onClick={() => {
 									i18n.changeLanguage('de');
+									setLanguageMenuOpen((prev) => !prev);
 								}}>
 								<h1>DE</h1>
 							</button>
