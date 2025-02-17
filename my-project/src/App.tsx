@@ -14,7 +14,7 @@ const ProtectedRoute = ({element}: {element: ReactNode}) => {
 	return <>{element}</>; // Render the element if authenticated
 };
 
-function App() {
+const App = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
@@ -30,6 +30,6 @@ function App() {
 			</Routes>
 		</BrowserRouter>
 	);
-}
+};
 
 export default App;

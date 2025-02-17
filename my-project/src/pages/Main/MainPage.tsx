@@ -1,7 +1,7 @@
 import TopNavBar from './components/TopNavBar'; // Assuming you created the TopNavBar component
 import SideNavBar from './components/SideNavBar'; // Assuming you created the SideNavBar component
 
-export default function MainPage() {
+const MainPage = () => {
 	return (
 		<div className="h-screen flex flex-col">
 			{/* Top Navigation Bar */}
@@ -23,4 +23,6 @@ export default function MainPage() {
 			</div>
 		</div>
 	);
-}
+};
+
+export default MainPage;

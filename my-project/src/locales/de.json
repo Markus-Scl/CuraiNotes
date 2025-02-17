@@ -1,0 +1,15 @@
+{
+    "topNavbar": {
+        "title": "CurAINotes",
+        "search": "Suche...",
+        "profile": "Dein Profil",
+        "logout": "Abmelden"
+    },
+
+    "sideNavbar": {
+        "dashboard": "Dashboard",
+        "documents": "Dokumente",
+        "settings": "Einstellungen",
+        "logout": "Abmelden"
+    }
+  }
