@@ -47,7 +47,7 @@ const TopNavBar = () => {
 		<div className="w-full bg-white/10 shadow-md py-3 px-6 flex items-center justify-between">
 			{/* Logo */}
 			<div className="flex items-center">
-				<h1 className="text-xl font-bold text-cyan-400 cursor-pointer" onClick={() => navigate('/home')}>
+				<h1 className="text-xl font-bold text-cyan-400 cursor-pointer" onClick={() => navigate('/')}>
 					CurAINotes
 				</h1>
 			</div>

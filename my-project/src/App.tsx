@@ -3,6 +3,7 @@ import LoginPage from './pages/Login/LoginPage';
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import MainPage from './pages/Main/MainPage';
 import ProfilePage from './pages/Profile/ProfilePage';
+import PricingPage from './pages/Pricing/PricingPage';
 
 // Protected Route Component
 const ProtectedRoute = ({element}: {element: ReactNode}) => {
@@ -21,6 +22,7 @@ const App = () => {
 			<Routes>
 				{/* Public Route: Login Page */}
 				<Route path="/login" element={<LoginPage />} />
+				<Route path="/pricing" element={<PricingPage />} />
 
 				{/* Protected Route: Dashboard Page */}
 				{/*<Route path="/home" element={<ProtectedRoute element={<MainPage />} />} />*/}
