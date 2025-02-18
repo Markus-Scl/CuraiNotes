@@ -58,15 +58,15 @@ export default function LoginPage() {
 
 				{/* Right Side: Background Image */}
 				<div className="w-4/7 bg-cover bg-center text-gray-800 p-4" style={{backgroundImage: `url(${cardLoginImage})`}}>
-					<div className="text-center bg-white/80 mb-2 p-6 rounded-lg shadow-lg inline-block max-w-lg">
+					<div className="text-center bg-white/90 mb-2 p-6 rounded-lg shadow-lg inline-block max-w-lg">
 						<h2 className="text-2xl font-bold">AI-Powered Documentation</h2>
 						<p className="text-lg">Transform voice recordings into accurate, structured reports in seconds.</p>
 					</div>
-					<div className="text-center bg-white/80 mb-2 p-6 rounded-lg shadow-lg inline-block max-w-lg">
+					<div className="text-center bg-white/90 mb-2 p-6 rounded-lg shadow-lg inline-block max-w-lg">
 						<h2 className="text-2xl font-bold mb-2">Seamless Workflow Integration</h2>
 						<p className="text-lg">Easily integrate with existing systems to enhance documentation efficiency without disrupting your workflow.</p>
 					</div>
-					<div className="text-center bg-white/80 mb-2 p-6 rounded-lg shadow-lg inline-block max-w-lg">
+					<div className="text-center bg-white/90 mb-2 p-6 rounded-lg shadow-lg inline-block max-w-lg">
 						<h2 className="text-2xl font-bold mb-2">Empowering Healthcare Professionals</h2>
 						<p className="text-lg">Free up valuable time for patient care by automating repetitive documentation tasks with cutting-edge AI.</p>
 					</div>
