@@ -41,7 +41,7 @@ export default function LoginPage() {
 							{/* Sign In Button */}
 							<button
 								className="w-full text-cyan-400 border-2 border-cyan-400 hover:bg-cyan-400 hover:text-white py-2 rounded-lg font-semibold cursor-pointer transition duration-200"
-								onClick={() => navigate('/home')}>
+								onClick={() => navigate('/')}>
 								Sign In
 							</button>
 						</form>

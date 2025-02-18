@@ -103,7 +103,12 @@ const TopNavBar = () => {
 					{/* Dropdown Menu */}
 					{profileMenuOpen && (
 						<div ref={profileMenuRef} className="absolute right-0 mt-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-lg w-48">
-							<button className="w-full flex items-center text-left py-2 px-4 text-cyan-400 hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer" onClick={() => navigate('/profile')}>
+							<button
+								className="w-full flex items-center text-left py-2 px-4 text-cyan-400 hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer"
+								onClick={() => {
+									setProfileMenuOpen(false);
+									navigate('/profile');
+								}}>
 								<PersonOutlineIcon fontSize="large" className="text-cyan-400 mr-4" />
 								<h1>{t('topNavbar.profile')}</h1>
 							</button>

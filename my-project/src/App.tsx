@@ -2,6 +2,7 @@ import {ReactNode} from 'react';
 import LoginPage from './pages/Login/LoginPage';
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import MainPage from './pages/Main/MainPage';
+import ProfilePage from './pages/Profile/ProfilePage';
 
 // Protected Route Component
 const ProtectedRoute = ({element}: {element: ReactNode}) => {
@@ -23,7 +24,9 @@ const App = () => {
 
 				{/* Protected Route: Dashboard Page */}
 				{/*<Route path="/home" element={<ProtectedRoute element={<MainPage />} />} />*/}
-				<Route path="/home" element={<MainPage />} />
+				<Route path="/" element={<MainPage />}>
+					<Route path="profile" element={<ProfilePage />} /> {/* Now /profile works */}
+				</Route>
 
 				{/* Redirects any other route to the login page */}
 				<Route path="*" element={<Navigate to="/login" />} />

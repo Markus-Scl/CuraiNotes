@@ -1,5 +1,6 @@
 import TopNavBar from './components/TopNavBar'; // Assuming you created the TopNavBar component
 import SideNavBar from './components/SideNavBar'; // Assuming you created the SideNavBar component
+import {Outlet} from 'react-router-dom';
 
 const MainPage = () => {
 	return (
@@ -17,8 +18,7 @@ const MainPage = () => {
 
 				{/* Main content taking remaining width */}
 				<div className="flex-1 p-4">
-					{/* Your main content goes here */}
-					<h1 className="text-2xl font-bold">Main Content</h1>
+					<Outlet />
 				</div>
 			</div>
 		</div>
