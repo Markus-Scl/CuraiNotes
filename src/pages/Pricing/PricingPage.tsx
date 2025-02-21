@@ -35,7 +35,7 @@ const tiers = [
 const PricingPage = () => {
 	const navigate = useNavigate();
 	return (
-		<div className="flex min-h-screen items-center justify-center bg-cover bg-center" style={{backgroundImage: `url(${mainLoginImage})`}}>
+		<div className="flex min-h-screen w-full items-center justify-center bg-cover bg-no-repeat bg-left" style={{backgroundImage: `url(${mainLoginImage})`}}>
 			<div className="relative mx-auto max-w-6xl px-6 mt-6">
 				<div className="mx-auto max-w-4xl text-center">
 					<p className="mt-2 text-5xl font-semibold tracking-tight text-gray-900 sm:text-6xl">Choose the right plan for you</p>
@@ -48,7 +48,9 @@ const PricingPage = () => {
 					{tiers.map((tier) => (
 						<div
 							key={tier.id}
-							className="relative group flex flex-col rounded-3xl p-8 ring-1 ring-gray-900/10 shadow-md transition-transform duration-300 hover:scale-108 hover:z-10 hover:shadow-2xl bg-white mb-10">
+							className="relative group flex flex-col rounded-3xl p-8 ring-1 ring-gray-900/10 shadow-md transition-transform duration-300 
+										hover:scale-108 hover:z-10 hover:ring-2 hover:ring-cyan-400 
+										hover:shadow-[0px_0px_20px_5px_rgba(34,211,238,0.6)] bg-white mb-10">
 							<h3 className="text-base font-semibold text-cyan-400">{tier.name}</h3>
 							<p className="mt-4 flex items-baseline gap-x-2">
 								<span className="text-5xl font-semibold tracking-tight text-gray-900">{tier.priceMonthly}</span>
@@ -64,10 +66,7 @@ const PricingPage = () => {
 								))}
 							</ul>
 							{/* Button positioned at the bottom */}
-							<button
-								className="mt-auto w-full text-cyan-400 border-2 border-cyan-400 hover:bg-cyan-400 hover:text-white py-2 rounded-lg font-semibold cursor-pointer transition duration-200 mt-4
-							"
-								onClick={() => console.log('hi')}>
+							<button className="mt-auto w-full text-cyan-400 border-2 border-cyan-400 hover:bg-cyan-400 hover:text-white py-2 rounded-lg font-semibold cursor-pointer transition duration-200 mt-4">
 								Get started today
 							</button>
 						</div>

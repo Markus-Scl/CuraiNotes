@@ -5,7 +5,7 @@ import {useNavigate} from 'react-router-dom';
 export default function LoginPage() {
 	const navigate = useNavigate();
 	return (
-		<div className="flex min-h-screen items-center justify-center bg-cover bg-center" style={{backgroundImage: `url(${mainLoginImage})`}}>
+		<div className="flex min-h-screen w-full items-center justify-center bg-cover bg-no-repeat bg-left" style={{backgroundImage: `url(${mainLoginImage})`}}>
 			{/* Card Container with two sections */}
 			<div className="w-full max-w-4xl shadow-lg rounded-2xl overflow-hidden flex h-[500px] bg-white">
 				{/* Left Side: Login Form */}
