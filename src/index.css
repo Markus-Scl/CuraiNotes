@@ -9,14 +9,6 @@ html, body {
   padding: 0;
 }
 
-html {
-  @apply bg-gray-100 text-gray-800;
-}
-
-html.dark {
-  @apply bg-gray-900 text-white;
-}
-
 #root {
   height: 100%;
 }
