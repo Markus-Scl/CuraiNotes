@@ -8,14 +8,17 @@ export default function LoginPage() {
 		{
 			headline: 'AI-Powered Documentation',
 			description: 'Transform voice recordings into accurate, structured reports in seconds.',
+			id: 'headline-1',
 		},
 		{
 			headline: 'Seamless Workflow Integration',
 			description: 'Easily integrate with existing systems to enhance documentation efficiency without disrupting your workflow.',
+			id: 'headline-2',
 		},
 		{
 			headline: 'Empowering Healthcare Professionals',
 			description: 'Free up valuable time for patient care by automating repetitive documentation tasks with cutting-edge AI.',
+			id: 'headline-3',
 		},
 	];
 	return (
@@ -73,7 +76,7 @@ export default function LoginPage() {
 				{/* Right Side: Background Image */}
 				<div className="w-[calc(4/7*100%)] bg-cover bg-center text-gray-800 p-4" style={{backgroundImage: `url(${cardLoginImage})`}}>
 					{tiers.map((tier) => (
-						<div className="text-center glass mb-2 p-6 rounded-lg shadow-lg inline-block max-w-lg">
+						<div key={tier.id} className="text-center glass mb-2 p-6 rounded-lg shadow-lg inline-block max-w-lg">
 							<h2 className="text-2xl font-bold">{tier.headline}</h2>
 							<p className="text-lg">{tier.description}</p>
 						</div>

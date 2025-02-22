@@ -4,6 +4,7 @@ import {WbSunny, NightlightRound} from '@mui/icons-material';
 export default function ThemeToggle() {
 	// Get the initial theme from localStorage, defaulting to 'customLight'
 	const [theme, setTheme] = useState(localStorage.getItem('theme') || 'customLight');
+	document.documentElement.setAttribute('data-theme', theme);
 
 	// Handler to toggle the theme
 	const handleThemeChange = () => {

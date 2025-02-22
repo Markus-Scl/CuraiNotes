@@ -18,10 +18,10 @@ export default {
       },
       customLight: {
         "primary": "oklch(0.789 0.154 211.53)",
-        "secondary": "#f6d860",
-        "accent": "#37cdbe",
-        "neutral": "#3d4451",
-        "base-100": "#ffffff",
+        "secondary": "oklch(0.985 0 0)",
+        "accent": "oklch(0.928 0.006 264.531)",
+        "neutral": "oklch(0.967 0.001 286.375)",
+        "base-100": "oklch(0.984 0.003 247.858)",
       }
     }]
   },
