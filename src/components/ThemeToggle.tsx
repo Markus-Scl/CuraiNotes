@@ -16,7 +16,7 @@ export default function ThemeToggle() {
 	};
 
 	return (
-		<button onClick={handleThemeChange} className="rounded-md hover:text-primary transition ml-6 cursor-pointer hover:bg-base-300 dark:hover:bg-base-600">
+		<button onClick={handleThemeChange} className="rounded-md hover:bg-accent transition ml-6 cursor-pointer">
 			{theme === 'customDark' ? <NightlightRound fontSize="large" className="text-primary" /> : <WbSunny fontSize="large" className="text-primary" />}
 		</button>
 	);

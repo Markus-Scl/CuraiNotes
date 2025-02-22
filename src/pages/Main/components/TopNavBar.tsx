@@ -44,10 +44,10 @@ const TopNavBar = () => {
 	}, [profileMenuOpen, languageMenuOpen]);
 
 	return (
-		<div className="w-full bg-white/10 shadow-md py-3 px-6 flex items-center justify-between">
+		<div className="w-full bg-neutral shadow-md py-3 px-6 flex items-center justify-between">
 			{/* Logo */}
 			<div className="flex items-center">
-				<h1 className="text-xl font-bold text-cyan-400 cursor-pointer" onClick={() => navigate('/')}>
+				<h1 className="text-xl font-bold text-primary cursor-pointer" onClick={() => navigate('/')}>
 					CurAINotes
 				</h1>
 			</div>
@@ -57,22 +57,19 @@ const TopNavBar = () => {
 				<input
 					type="text"
 					placeholder={t('topNavbar.search')}
-					className="py-1 px-4 rounded-md text-cyan-400 dark:bg-gray-800 dark:text-cyan-400 placeholder-cyan-400 dark:placeholder-cyan-400 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 mr-4"
+					className="py-1 px-4 rounded-md bg-neutral text-primary placeholder-primary border border-accent focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary mr-4 hover:bg-accent"
 				/>
 				<ThemeToggle />
 
 				{/* Language Menu */}
 				<div className="relative">
-					<button
-						ref={languageButtonRef}
-						onClick={() => setLanguageMenuOpen((prev) => !prev)}
-						className="rounded-md hover:text-cyan-600 transition ml-6 cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-500">
-						<OutlinedFlagIcon fontSize="large" className="text-cyan-400" />
+					<button ref={languageButtonRef} onClick={() => setLanguageMenuOpen((prev) => !prev)} className="rounded-md transition ml-6 cursor-pointer hover:bg-accent">
+						<OutlinedFlagIcon fontSize="large" className="text-primary" />
 					</button>
 					{languageMenuOpen && (
-						<div ref={languageMenuRef} className="absolute right-0 mt-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-lg w-48">
+						<div ref={languageMenuRef} className="absolute right-0 mt-2 bg-neutral border border-accent rounded-md shadow-lg w-48">
 							<button
-								className="w-full flex items-center text-left py-2 px-4 text-cyan-400 hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer"
+								className="w-full flex items-center text-left py-2 px-4 text-primary hover:bg-accent cursor-pointer"
 								onClick={() => {
 									i18n.changeLanguage('en');
 									setLanguageMenuOpen((prev) => !prev);
@@ -80,7 +77,7 @@ const TopNavBar = () => {
 								<h1>EN</h1>
 							</button>
 							<button
-								className="w-full flex items-center text-left py-2 px-4 text-cyan-400 hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer"
+								className="w-full flex items-center text-left py-2 px-4 text-primary hover:bg-accent cursor-pointer"
 								onClick={() => {
 									i18n.changeLanguage('de');
 									setLanguageMenuOpen((prev) => !prev);
@@ -93,31 +90,28 @@ const TopNavBar = () => {
 
 				{/* Profile Menu */}
 				<div className="relative">
-					<button
-						ref={profileButtonRef}
-						onClick={() => setProfileMenuOpen((prev) => !prev)}
-						className="rounded-md hover:text-cyan-600 transition ml-6 cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-500">
-						<PersonOutlineIcon fontSize="large" className="text-cyan-400" />
+					<button ref={profileButtonRef} onClick={() => setProfileMenuOpen((prev) => !prev)} className="rounded-md hover:bg-accent transition ml-6 cursor-pointer">
+						<PersonOutlineIcon fontSize="large" className="text-primary" />
 					</button>
 
 					{/* Dropdown Menu */}
 					{profileMenuOpen && (
-						<div ref={profileMenuRef} className="absolute right-0 mt-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-lg w-48">
+						<div ref={profileMenuRef} className="absolute right-0 mt-2 bg-neutral  border border-accent rounded-md shadow-lg w-48">
 							<button
-								className="w-full flex items-center text-left py-2 px-4 text-cyan-400 hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer"
+								className="w-full flex items-center text-left py-2 px-4 text-primary hover:bg-accent  cursor-pointer"
 								onClick={() => {
 									setProfileMenuOpen(false);
 									navigate('/profile');
 								}}>
-								<PersonOutlineIcon fontSize="large" className="text-cyan-400 mr-4" />
+								<PersonOutlineIcon fontSize="large" className="text-primary mr-4" />
 								<h1>{t('topNavbar.profile')}</h1>
 							</button>
 							<button
-								className="w-full flex items-center text-left py-2 px-4 text-cyan-400 hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer"
+								className="w-full flex items-center text-left py-2 px-4 text-primary hover:bg-accent cursor-pointer"
 								onClick={() => {
 									navigate('/login');
 								}}>
-								<Logout fontSize="large" className="text-cyan-400 mr-4" />
+								<Logout fontSize="large" className="text-primary mr-4" />
 								<h1>{t('topNavbar.logout')}</h1>
 							</button>
 						</div>
