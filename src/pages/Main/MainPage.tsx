@@ -11,13 +11,13 @@ const MainPage = () => {
 			</div>
 
 			{/* Flex container for sidebar and main content */}
-			<div className="flex flex-1">
+			<div className="flex h-full">
 				<div className="w-1/8 min-w-[180px] shadow-md dark:bg-gray-800">
 					<SideNavBar />
 				</div>
 
 				{/* Main content taking remaining width */}
-				<div className="flex-1 p-4">
+				<div className="flex-1 overflow-auto p-4">
 					<Outlet />
 				</div>
 			</div>

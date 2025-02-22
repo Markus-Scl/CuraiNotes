@@ -9,7 +9,7 @@ const SideNavBar = () => {
 	const {t} = useTranslation(); // Access the translation function
 
 	return (
-		<nav className="h-screen bg-white/10 shadow-lg text-white w-full flex flex-col relative">
+		<nav className="h-full bg-white/10 shadow-lg text-white w-full flex flex-col relative">
 			{/* Dashboard Link */}
 			<a
 				onClick={() => setActive('Dashboard')}
@@ -38,7 +38,7 @@ const SideNavBar = () => {
 			</a>
 
 			{/* Logout Link */}
-			<div className="bottom-14 absolute w-full">
+			<div className="bottom-0 absolute w-full">
 				<a
 					onClick={() => navigate('/login')}
 					className={`flex items-center space-x-3 p-3 transition w-full cursor-pointer

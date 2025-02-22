@@ -44,13 +44,13 @@ const PricingPage = () => {
 					Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer loyalty, and driving sales.
 				</p>
 
-				<div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+				<div className="mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
 					{tiers.map((tier) => (
 						<div
 							key={tier.id}
 							className="relative group flex flex-col rounded-3xl p-8 ring-1 ring-gray-900/10 shadow-md transition-transform duration-300 
-										hover:scale-110 hover:z-10 hover:ring-2 hover:ring-cyan-400 
-										hover:shadow-[0px_0px_20px_5px_rgba(34,211,238,0.6)] bg-white mb-10">
+				hover:scale-110 hover:z-10 hover:ring-2 hover:ring-cyan-400 
+				hover:shadow-[0px_0px_20px_5px_rgba(34,211,238,0.6)] bg-white mb-10 min-w-[250px]">
 							<h3 className="text-base font-semibold text-cyan-400">{tier.name}</h3>
 							<p className="mt-4 flex items-baseline gap-x-2">
 								<span className="text-5xl font-semibold tracking-tight text-gray-900">{tier.priceMonthly}</span>
@@ -72,6 +72,7 @@ const PricingPage = () => {
 						</div>
 					))}
 				</div>
+
 				<div className="w-full flex justify-center">
 					<button
 						className="w-1/3 text-cyan-400 bg-white border-2 border-cyan-400 hover:bg-cyan-400 hover:text-white py-2 rounded-lg font-semibold cursor-pointer transition duration-200 
