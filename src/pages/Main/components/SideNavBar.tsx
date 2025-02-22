@@ -38,7 +38,7 @@ const SideNavBar = () => {
 			</a>
 
 			{/* Logout Link */}
-			<div className="bottom-15 absolute w-full">
+			<div className="bottom-14 absolute w-full">
 				<a
 					onClick={() => navigate('/login')}
 					className={`flex items-center space-x-3 p-3 transition w-full cursor-pointer

@@ -9,7 +9,7 @@ export default function LoginPage() {
 			{/* Card Container with two sections */}
 			<div className="w-full max-w-4xl shadow-lg rounded-2xl overflow-hidden flex h-[500px] bg-white">
 				{/* Left Side: Login Form */}
-				<div className="flex w-3/7 items-center justify-center p-8">
+				<div className="flex w-[calc(3/7*100%)] items-center justify-center p-8">
 					<div className="w-full">
 						<h2 className="text-center text-cyan-400 text-2xl font-semibold mb-6">Welcome Back</h2>
 
@@ -57,7 +57,7 @@ export default function LoginPage() {
 				</div>
 
 				{/* Right Side: Background Image */}
-				<div className="w-4/7 bg-cover bg-center text-gray-800 p-4" style={{backgroundImage: `url(${cardLoginImage})`}}>
+				<div className="w-[calc(4/7*100%)] bg-cover bg-center text-gray-800 p-4" style={{backgroundImage: `url(${cardLoginImage})`}}>
 					<div className="text-center bg-white/90 mb-2 p-6 rounded-lg shadow-lg inline-block max-w-lg">
 						<h2 className="text-2xl font-bold">AI-Powered Documentation</h2>
 						<p className="text-lg">Transform voice recordings into accurate, structured reports in seconds.</p>

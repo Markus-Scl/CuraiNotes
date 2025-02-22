@@ -49,7 +49,7 @@ const PricingPage = () => {
 						<div
 							key={tier.id}
 							className="relative group flex flex-col rounded-3xl p-8 ring-1 ring-gray-900/10 shadow-md transition-transform duration-300 
-										hover:scale-108 hover:z-10 hover:ring-2 hover:ring-cyan-400 
+										hover:scale-110 hover:z-10 hover:ring-2 hover:ring-cyan-400 
 										hover:shadow-[0px_0px_20px_5px_rgba(34,211,238,0.6)] bg-white mb-10">
 							<h3 className="text-base font-semibold text-cyan-400">{tier.name}</h3>
 							<p className="mt-4 flex items-baseline gap-x-2">

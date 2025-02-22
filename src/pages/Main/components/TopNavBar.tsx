@@ -57,7 +57,7 @@ const TopNavBar = () => {
 				<input
 					type="text"
 					placeholder={t('topNavbar.search')}
-					className="py-1 px-4 rounded-md text-cyan-400 dark:bg-gray-800 dark:text-cyan-400 placeholder-cyan-400 dark:placeholder-cyan-400 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 mr-4"
+					className="py-1 px-4 rounded-md text-cyan-400 dark:bg-gray-800 dark:text-cyan-400 placeholder-cyan-400 dark:placeholder-cyan-400 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 mr-4"
 				/>
 				<ThemeToggle />
 
