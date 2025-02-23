@@ -41,7 +41,7 @@ const PricingPage = () => {
 				<div className="glass relative rounded-3xl flex flex-col items-center justify-center p-6">
 					<div className="absolute top-4 left-4 tooltip" data-tip="Back to login">
 						<button className="relative btn btn-outline btn-square btn-primary group hover:btn-primary hover:text-white" onClick={() => navigate('/login')}>
-							<ArrowBackIcon className="text-cyan-600 group-hover:text-white transition-colors duration-200" />
+							<ArrowBackIcon className="text-primary group-hover:text-white transition-colors duration-200" />
 						</button>
 					</div>
 

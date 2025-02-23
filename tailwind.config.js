@@ -20,8 +20,8 @@ export default {
       customLight: {
         "primary": "oklch(0.789 0.154 211.53)",
         "secondary": "oklch(0.985 0 0)",
-        "accent": "oklch(0.951 0.026 236.824)",
-        "neutral": "oklch(0.977 0.013 236.62)",
+        "accent": "oklch(0.922 0 0)",
+        "neutral": "oklch(0.97 0 0)",
         "base-100": "oklch(0.984 0.003 247.858)",
         "ghost": "oklch(0.656 0.241 354.308)"
       }
