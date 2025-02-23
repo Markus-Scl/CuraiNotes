@@ -28,7 +28,7 @@ export default function LoginPage() {
 				{/* Left Side: Login Form */}
 				<div className="flex w-[calc(3/7*100%)] items-center justify-center p-8">
 					<div className="w-full">
-						<h2 className="text-center text-cyan-400 text-2xl font-semibold mb-6">Welcome Back</h2>
+						<h2 className="text-center text-primary text-2xl font-semibold mb-6">Welcome Back</h2>
 
 						{/* Login Form */}
 						<form className="space-y-6">
@@ -50,14 +50,14 @@ export default function LoginPage() {
 
 							{/* Forgot Password */}
 							<div className="text-left text-sm">
-								<a href="#" className="text-cyan-400 hover:underline">
+								<a href="#" className="text-primary hover:underline">
 									Forgot password?
 								</a>
 							</div>
 
 							{/* Sign In Button */}
 							<button
-								className="w-full text-cyan-400 border-2 border-cyan-400 hover:bg-cyan-400 hover:text-white py-2 rounded-lg font-semibold cursor-pointer transition duration-200"
+								className="w-full text-primary border-2 border-cyan-400 hover:bg-cyan-400 hover:text-white py-2 rounded-lg font-semibold cursor-pointer transition duration-200"
 								onClick={() => navigate('/')}>
 								Sign In
 							</button>
@@ -66,7 +66,7 @@ export default function LoginPage() {
 						{/* Sign Up Link */}
 						<p className="text-center text-sm text-gray-500 mt-6">
 							Don’t have an account?{' '}
-							<a href="pricing" className="text-cyan-400 hover:underline">
+							<a href="pricing" className="text-primary hover:underline">
 								Sign up
 							</a>
 						</p>

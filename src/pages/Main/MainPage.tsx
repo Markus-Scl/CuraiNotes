@@ -12,7 +12,7 @@ const MainPage = () => {
 
 			{/* Flex container for sidebar and main content */}
 			<div className="flex h-full">
-				<div className="w-1/8 min-w-[180px] shadow-md dark:bg-gray-800">
+				<div className="w-1/8 min-w-[220px] shadow-md dark:bg-gray-800">
 					<SideNavBar />
 				</div>
 

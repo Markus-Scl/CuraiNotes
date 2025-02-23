@@ -1,6 +1,7 @@
 import {Check} from '@mui/icons-material';
 import {useNavigate} from 'react-router-dom';
 import mainLoginImage from '../../assets/loginMain1.jpg';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const tiers = [
 	{
@@ -37,21 +38,30 @@ const PricingPage = () => {
 	return (
 		<div className="flex min-h-screen w-full items-center justify-center bg-cover bg-no-repeat bg-left" style={{backgroundImage: `url(${mainLoginImage})`}}>
 			<div className="relative mx-auto max-w-6xl px-6 mt-6">
-				<div className="mx-auto max-w-4xl text-center">
-					<p className="mt-2 text-5xl font-semibold tracking-tight text-gray-900 sm:text-6xl">Choose the right plan for you</p>
+				<div className="glass relative rounded-3xl flex flex-col items-center justify-center p-6">
+					<div className="absolute top-4 left-4 tooltip" data-tip="Back to login">
+						<button className="relative btn btn-outline btn-square btn-primary group hover:btn-primary hover:text-white" onClick={() => navigate('/login')}>
+							<ArrowBackIcon className="text-cyan-600 group-hover:text-white transition-colors duration-200" />
+						</button>
+					</div>
+
+					{/* Centered Content */}
+					<div className="mx-auto max-w-4xl text-center">
+						<p className="mt-2 text-5xl font-semibold tracking-tight text-gray-900 sm:text-6xl">Choose the right plan for you</p>
+					</div>
+					<p className="mx-auto mt-6 max-w-2xl text-center text-lg text-gray-600 sm:text-xl">
+						Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer loyalty, and driving sales.
+					</p>
 				</div>
-				<p className="mx-auto mt-6 max-w-2xl text-center text-lg text-gray-600 sm:text-xl">
-					Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer loyalty, and driving sales.
-				</p>
 
 				<div className="mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
 					{tiers.map((tier) => (
 						<div
 							key={tier.id}
 							className="relative group flex flex-col rounded-3xl p-8 ring-1 ring-gray-900/10 shadow-md transition-transform duration-300 
-				hover:scale-110 hover:z-10 hover:ring-2 hover:ring-cyan-400 
+				hover:scale-110 hover:z-10 hover:ring-2 hover:ring-primary 
 				hover:shadow-[0px_0px_20px_5px_rgba(34,211,238,0.6)] bg-white mb-10 min-w-[250px]">
-							<h3 className="text-base font-semibold text-cyan-400">{tier.name}</h3>
+							<h3 className="text-base font-semibold text-primary">{tier.name}</h3>
 							<p className="mt-4 flex items-baseline gap-x-2">
 								<span className="text-5xl font-semibold tracking-tight text-gray-900">{tier.priceMonthly}</span>
 								<span className="text-base text-gray-500">/month</span>
@@ -60,26 +70,17 @@ const PricingPage = () => {
 							<ul className="mt-4 space-y-3 text-sm text-gray-600 mb-6">
 								{tier.features.map((feature) => (
 									<li key={feature} className="flex items-center gap-x-3">
-										<Check className="h-5 w-5 text-cyan-400" />
+										<Check className="h-5 w-5 text-primary" />
 										{feature}
 									</li>
 								))}
 							</ul>
 							{/* Button positioned at the bottom */}
-							<button className="mt-auto w-full text-cyan-400 border-2 border-cyan-400 hover:bg-cyan-400 hover:text-white py-2 rounded-lg font-semibold cursor-pointer transition duration-200 mt-4">
+							<button className="mt-auto w-full text-primary border-2 border-primary hover:bg-primary hover:text-white py-2 rounded-lg font-semibold cursor-pointer transition duration-200 mt-4">
 								Get started today
 							</button>
 						</div>
 					))}
-				</div>
-
-				<div className="w-full flex justify-center">
-					<button
-						className="w-1/3 text-cyan-400 bg-white border-2 border-cyan-400 hover:bg-cyan-400 hover:text-white py-2 rounded-lg font-semibold cursor-pointer transition duration-200 
-							"
-						onClick={() => navigate('/login')}>
-						Get back to login
-					</button>
 				</div>
 			</div>
 		</div>
