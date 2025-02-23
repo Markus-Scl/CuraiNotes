@@ -1,3 +1,5 @@
+import AudioPlayer from '../../components/AudioPlayer';
+
 const ProfilePage = () => {
 	return (
 		<div>
@@ -7,6 +9,8 @@ const ProfilePage = () => {
 			<div className="badge badge-secondary">secondary</div>
 			<div className="badge badge-accent">accent</div>
 			<div className="badge badge-ghost">ghost</div>
+
+			<AudioPlayer />
 		</div>
 	);
 };
