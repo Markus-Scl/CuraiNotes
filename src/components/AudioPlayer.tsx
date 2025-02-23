@@ -179,7 +179,7 @@ const AudioPlayer = () => {
 						</button>
 					</div>
 					<button onClick={() => skip(10)} className="rounded-md hover:bg-accent cursor-pointer">
-						<Forward10Icon className="text-primary" fontSize="large" onClick={() => skip(10)} />
+						<Forward10Icon className="text-primary" fontSize="large" />
 					</button>
 					<button onClick={() => skip(duration)} className="rounded-md hover:bg-accent cursor-pointer">
 						<SkipNextIcon className="text-primary" fontSize="large" />
