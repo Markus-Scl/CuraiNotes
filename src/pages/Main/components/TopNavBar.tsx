@@ -67,7 +67,7 @@ const TopNavBar = () => {
 						<OutlinedFlagIcon fontSize="large" className="text-primary" />
 					</button>
 					{languageMenuOpen && (
-						<div ref={languageMenuRef} className="absolute right-0 mt-2 bg-neutral border border-accent rounded-md shadow-lg w-48">
+						<div ref={languageMenuRef} className="absolute right-0 mt-2 bg-neutral border border-accent rounded-md shadow-lg w-24">
 							<button
 								className="w-full flex items-center text-left py-2 px-4 text-primary hover:bg-accent cursor-pointer"
 								onClick={() => {

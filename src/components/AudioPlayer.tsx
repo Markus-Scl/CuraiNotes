@@ -109,12 +109,15 @@ const AudioPlayer = () => {
 			</div>
 
 			{/* Controls */}
-			<div className="flex justify-between items-center w-full mt-3">
+			<div className="flex flex-row w-full mt-3">
 				{/* Volume Control on the Left (Visible only on hover) */}
-				<div className="group flex items-center gap-2 relative">
-					<button className="btn btn-square btn-outline p-2" onClick={handleMute}>
-						{isMuted || volume === 0 ? <VolumeOffIcon fontSize="small" /> : <VolumeUpIcon fontSize="small" />}
-					</button>
+				<div className="w-1/6 flex justify-center">
+					{isMuted || volume === 0 ? (
+						<VolumeOffIcon fontSize="large" onClick={handleMute} className="text-primary cursor-pointer" />
+					) : (
+						<VolumeUpIcon fontSize="large" className="text-primary cursor-pointer" onClick={handleMute} />
+					)}
+
 					{/* Volume Slider (hidden by default, shown on hover) */}
 					<div className="group-hover:block hidden absolute left-12 transform -translate-x-1/2">
 						<input type="range" min="0" max="1" step="0.01" value={isMuted ? 0 : volume} onChange={handleVolumeChange} className="range range-primary w-24 rotate-90" />
@@ -122,15 +125,16 @@ const AudioPlayer = () => {
 				</div>
 
 				{/* Play Controls in the Center */}
-				<div className="flex items-center gap-6">
-					{/* Skip All the Way Back */}
+
+				{/* Skip All the Way Back */}
+				<div className="flex justify-center gap-5 w-2/3">
 					<SkipPreviousIcon className="text-primary cursor-pointer" fontSize="large" onClick={() => skip(-duration)} />
 
 					{/* Skip Back Button */}
 					<Replay10Icon className="text-primary cursor-pointer" fontSize="large" onClick={() => skip(-10)} />
 
 					{/* Play/Pause Button */}
-					<div className="relative flex items-center">
+					<div className="relative flex">
 						{isPlaying ? (
 							<PauseCircleIcon className="text-primary cursor-pointer" fontSize="large" onClick={togglePlay} />
 						) : (
@@ -143,28 +147,28 @@ const AudioPlayer = () => {
 
 					{/* Skip All the Way Forward */}
 					<SkipNextIcon className="text-primary cursor-pointer" fontSize="large" onClick={() => skip(duration)} />
+				</div>
 
-					{/* Playback Speed Icon with Dropdown */}
-					<div className="group relative">
-						<SpeedIcon className="text-primary cursor-pointer" fontSize="large" />
-						{/* Playback Speed Dropdown (hidden by default, shown on hover) */}
-						<div className="group-hover:block hidden absolute top-8 left-0 bg-white text-black p-2 rounded shadow-md">
-							<button className="block w-full text-left p-2" onClick={() => handleSpeedChange(0.5)}>
-								0.5x
-							</button>
-							<button className="block w-full text-left p-2" onClick={() => handleSpeedChange(0.75)}>
-								0.75x
-							</button>
-							<button className="block w-full text-left p-2" onClick={() => handleSpeedChange(1)}>
-								1x (Default)
-							</button>
-							<button className="block w-full text-left p-2" onClick={() => handleSpeedChange(1.5)}>
-								1.5x
-							</button>
-							<button className="block w-full text-left p-2" onClick={() => handleSpeedChange(2)}>
-								2x
-							</button>
-						</div>
+				{/* Playback Speed Icon with Dropdown */}
+				<div className="group w-1/6 flex justify-center">
+					<SpeedIcon className="text-primary cursor-pointer" fontSize="large" />
+					{/* Playback Speed Dropdown (hidden by default, shown on hover) */}
+					<div className="group-hover:block hidden absolute top-8 left-0 bg-white text-black p-2 rounded shadow-md">
+						<button className="block w-full text-left p-2" onClick={() => handleSpeedChange(0.5)}>
+							0.5x
+						</button>
+						<button className="block w-full text-left p-2" onClick={() => handleSpeedChange(0.75)}>
+							0.75x
+						</button>
+						<button className="block w-full text-left p-2" onClick={() => handleSpeedChange(1)}>
+							1x (Default)
+						</button>
+						<button className="block w-full text-left p-2" onClick={() => handleSpeedChange(1.5)}>
+							1.5x
+						</button>
+						<button className="block w-full text-left p-2" onClick={() => handleSpeedChange(2)}>
+							2x
+						</button>
 					</div>
 				</div>
 			</div>
