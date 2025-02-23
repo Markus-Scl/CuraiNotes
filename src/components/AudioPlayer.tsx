@@ -114,7 +114,7 @@ const AudioPlayer = () => {
 	}, [speedMenuOpen]);
 
 	return (
-		<div className="bg-neutral relative flex flex-col items-center justify-center p-6 w-full max-w-lg mx-auto rounded-3xl">
+		<div className="bg-neutral relative flex flex-col items-center justify-center p-6 w-full max-w-lg mx-auto rounded-3xl border border-accent">
 			{/* Audio Element */}
 			<audio ref={audioRef} src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
 
