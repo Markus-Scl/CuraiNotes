@@ -115,7 +115,7 @@ const AudioPlayer = () => {
 	}, [speedMenuOpen]);
 
 	return (
-		<div className="glass relative flex flex-col items-center justify-center p-6 w-full max-w-lg mx-auto rounded-3xl">
+		<div className="bg-neutral relative flex flex-col items-center justify-center p-6 w-full max-w-lg mx-auto rounded-3xl">
 			{/* Audio Element */}
 			<audio ref={audioRef} src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
 
@@ -134,7 +134,7 @@ const AudioPlayer = () => {
 			/>
 
 			{/* Time Display */}
-			<div className="flex justify-between w-full text-xs text-gray-300">
+			<div className="flex justify-between w-full text-xs">
 				<span>{formatTime(currentTime)}</span>
 				<span>{formatTime(duration)}</span>
 			</div>
@@ -144,11 +144,13 @@ const AudioPlayer = () => {
 				{/* Volume Control */}
 				<div className="w-1/4 flex justify-center items-center relative">
 					{/* Volume Icon */}
-					{isMuted || volume === 0 ? (
-						<VolumeOffIcon fontSize="large" onClick={handleMute} className="text-primary cursor-pointer" />
-					) : (
-						<VolumeUpIcon fontSize="large" className="text-primary cursor-pointer" onClick={handleMute} />
-					)}
+					<button onClick={handleMute} className="rounded-md hover:bg-accent cursor-pointer">
+						{isMuted || volume === 0 ? (
+							<VolumeOffIcon fontSize="large" onClick={handleMute} className="text-primary" />
+						) : (
+							<VolumeUpIcon fontSize="large" className="text-primary" onClick={handleMute} />
+						)}
+					</button>
 
 					{/* Volume Slider next to the icon */}
 					<input
@@ -164,22 +166,29 @@ const AudioPlayer = () => {
 
 				{/* Play Controls */}
 				<div className="flex justify-center gap-5 w-2/3">
-					<SkipPreviousIcon className="text-primary cursor-pointer" fontSize="large" onClick={() => skip(-duration)} />
-					<Replay10Icon className="text-primary cursor-pointer" fontSize="large" onClick={() => skip(-10)} />
+					<button onClick={() => skip(-duration)} className="rounded-md hover:bg-accent cursor-pointer">
+						<SkipPreviousIcon className="text-primary" fontSize="large" />
+					</button>
+					<button onClick={() => skip(-10)} className="rounded-md hover:bg-accent cursor-pointer">
+						<Replay10Icon className="text-primary" fontSize="large" />
+					</button>
+
 					<div className="relative flex">
-						{isPlaying ? (
-							<PauseCircleIcon className="text-primary cursor-pointer" fontSize="large" onClick={togglePlay} />
-						) : (
-							<PlayCircleIcon className="text-primary cursor-pointer" fontSize="large" onClick={togglePlay} />
-						)}
+						<button onClick={togglePlay} className="rounded-md hover:bg-accent cursor-pointer">
+							{isPlaying ? <PauseCircleIcon className="text-primary" fontSize="large" /> : <PlayCircleIcon className="text-primary" fontSize="large" />}
+						</button>
 					</div>
-					<Forward10Icon className="text-primary cursor-pointer" fontSize="large" onClick={() => skip(10)} />
-					<SkipNextIcon className="text-primary cursor-pointer" fontSize="large" onClick={() => skip(duration)} />
+					<button onClick={() => skip(10)} className="rounded-md hover:bg-accent cursor-pointer">
+						<Forward10Icon className="text-primary" fontSize="large" onClick={() => skip(10)} />
+					</button>
+					<button onClick={() => skip(duration)} className="rounded-md hover:bg-accent cursor-pointer">
+						<SkipNextIcon className="text-primary" fontSize="large" />
+					</button>
 				</div>
 
 				{/* Playback Speed Icon with Dropdown */}
 				<div className="relative w-1/6 flex justify-center items-center">
-					<button ref={speedButtonRef} className="text-primary cursor-pointer" onClick={() => setSpeedMenuOpen((prev) => !prev)}>
+					<button ref={speedButtonRef} className="text-primary  hover:bg-accent w-9 h-9 rounded-md" onClick={() => setSpeedMenuOpen((prev) => !prev)}>
 						<h1>{speed}</h1>
 					</button>
 
