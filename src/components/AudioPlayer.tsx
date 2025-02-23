@@ -17,7 +17,7 @@ const AudioPlayer = () => {
 	const [volume, setVolume] = useState(1); // Track volume state separately
 	const [isMuted, setIsMuted] = useState(false); // Track mute state separately
 	const [playbackSpeed, setPlaybackSpeed] = useState(1); // Track playback speed
-	const [speed, setSpeed] = useState<String>('1.0 X'); // Display speed
+	const [speed, setSpeed] = useState<number>(1); // Display speed
 	const [speedMenuOpen, setSpeedMenuOpen] = useState<boolean>(false); // Manage speed menu visibility
 	const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -87,8 +87,7 @@ const AudioPlayer = () => {
 
 	// Handle playback speed change
 	const handleSpeedChange = (newSpeed: number) => {
-		const newS: string = String(newSpeed) + 'X';
-		setSpeed(newS);
+		setSpeed(newSpeed);
 		setPlaybackSpeed(newSpeed);
 		setSpeedMenuOpen(false); // Close speed menu when an option is selected
 	};
@@ -189,7 +188,7 @@ const AudioPlayer = () => {
 				{/* Playback Speed Icon with Dropdown */}
 				<div className="relative w-1/6 flex justify-center items-center">
 					<button ref={speedButtonRef} className="text-primary  hover:bg-accent w-9 h-9 rounded-md" onClick={() => setSpeedMenuOpen((prev) => !prev)}>
-						<h1>{speed}</h1>
+						<h1>{speed.toFixed(1)}x</h1>
 					</button>
 
 					{/* Dropdown */}
@@ -197,7 +196,7 @@ const AudioPlayer = () => {
 						<div ref={speedMenuRef} className="absolute top-8 left-0 bg-neutral rounded shadow-md">
 							{speedOptions.map((option) => (
 								<button key={option} className="w-full flex items-center text-left py-2 px-4 text-primary hover:bg-accent cursor-pointer" onClick={() => handleSpeedChange(option)}>
-									{option}x
+									{option.toFixed(1)}x
 								</button>
 							))}
 						</div>
