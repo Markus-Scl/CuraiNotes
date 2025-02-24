@@ -35,7 +35,11 @@ export default function LoginPage() {
 							{/* Email Input */}
 							<div>
 								<label className="block text-gray-600 text-sm mb-1">Email</label>
-								<input type="email" placeholder="Enter your email" className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+								<input
+									type="email"
+									placeholder="Enter your email"
+									className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 text-black"
+								/>
 							</div>
 
 							{/* Password Input */}
@@ -44,7 +48,7 @@ export default function LoginPage() {
 								<input
 									type="password"
 									placeholder="Enter your password"
-									className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+									className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 text-black"
 								/>
 							</div>
 
