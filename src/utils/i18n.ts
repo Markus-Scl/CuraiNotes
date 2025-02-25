@@ -5,6 +5,10 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import en from '../locales/en.json';
 import de from '../locales/de.json';
 
+// Detect browser language
+const userLang = navigator.language || navigator.languages[0];
+const detectedLang = userLang.startsWith('de') ? 'de' : 'en';
+
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -13,6 +17,7 @@ i18n
       en: { translation: en },
       de: { translation: de },
     },
+    lng: detectedLang,
     fallbackLng: 'en', // Default to English
     /*detection: {
       order: ['navigator', 'localStorage', 'cookie'],

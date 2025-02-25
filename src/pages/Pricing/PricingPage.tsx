@@ -5,8 +5,8 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const tiers = [
 	{
-		name: 'Hobby',
-		id: 'tier-hobby',
+		name: 'Basic',
+		id: 'tier-basic',
 		href: '#',
 		priceMonthly: '$29',
 		description: "The perfect plan if you're just getting started with our product.",
@@ -23,8 +23,8 @@ const tiers = [
 		featured: false,
 	},
 	{
-		name: 'Enterprise',
-		id: 'tier-enterprise',
+		name: 'Unlimited',
+		id: 'tier-unliited',
 		href: '#',
 		priceMonthly: '$99',
 		description: 'Dedicated support and infrastructure for your company.',

@@ -11,5 +11,17 @@
         "documents": "Documents",
         "settings": "Settings",
         "logout": "Logout"
+    },
+
+    "login": {
+        "headline": "Welcome Back",
+        "email": "Email",
+        "enterEmail": "Enter your email",
+        "password": "Password",
+        "enterPassword": "Enter your password",
+        "forgot": "Forgot password?",
+        "signIn": "Sign In",
+        "signupQuestion": "Don't have an account?",
+        "signUp": "Sign Up"
     }
 }
